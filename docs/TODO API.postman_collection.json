@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "09850580-1981-4a63-b835-416b38e86d65",
+		"name": "TODO API",
+		"description": "API zur Erstellung, Bearbeitung und Löschung von TODO Einträgen.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Erstelle ein TODO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Clean the dining room\",\r\n    \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/{{TODOS_API}}",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{TODOS_API}}"
+					]
+				},
+				"description": "Erstellt ein TODO Eintrag mit einem text und einem Status.\n\nBeschreibung der möglichen Status:\n\n*   active: Das TODO muss noch erledigt werden.\n*   completed: Das TODO ist bereits erledigt.\n    \n\nGibt die eindeutige ID des soeben erstellten TODOs zurück."
+			},
+			"response": []
+		},
+		{
+			"name": "Hole alle TODOs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/{{TODOS_API}}",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{TODOS_API}}"
+					]
+				},
+				"description": "Gibt alle TODOs mit text und status zurück.\n\nMögliche Erweiterungen mit Filterung nach Status sind denkbar."
+			},
+			"response": []
+		},
+		{
+			"name": "Hole ein TODO mit der ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/{{TODOS_API}}/1234",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{TODOS_API}}",
+						"1234"
+					]
+				},
+				"description": "Gibt ein TODO mit einer spezifischen ID zurück."
+			},
+			"response": []
+		},
+		{
+			"name": "Bearbeite TODO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Clean the dining room\",\r\n    \"status\": \"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/{{TODOS_API}}/1234",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{TODOS_API}}",
+						"1234"
+					]
+				},
+				"description": "Bearbeitet ein TODO mit einer bestimmten Id.\n\nMit dieser Methode kann zum Beispiel der Zustand von \"active\" auf \"completed\" geändert werden."
+			},
+			"response": []
+		},
+		{
+			"name": "Löschen eines TODOs",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/{{TODOS_API}}/1234",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{TODOS_API}}",
+						"1234"
+					]
+				},
+				"description": "Löscht ein existierendes TODO."
+			},
+			"response": []
+		}
+	]
+}

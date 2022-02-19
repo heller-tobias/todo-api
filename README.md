@@ -49,8 +49,8 @@ Die API läuft nun unter localhost:5001
 
 ## Testen der API
 -  Öffnen der Postman Collection von ``./docs``
--  Erstellen einer Notiz mit POST ``/notes``.
+-  Erstellen einer Notiz mit POST ``/todos``.
    - Gibt Id zurück
-- Holen aller Notizen mit GET ``/notes``.
-- Holen der erstellten Notiz mit GET ``/notes/{id}``.
-- Bearbeiten der Notiz mit PUT ``/notes/{id}``.
+- Holen aller Notizen mit GET ``/todos``.
+- Holen der erstellten Notiz mit GET ``/todos/{id}``.
+- Bearbeiten der Notiz mit PUT ``/todos/{id}``.
