@@ -28,6 +28,38 @@ paths:
                       type: string
                     changed:
                       type: string
+    post:
+      operationId: "endpoints.todos.post"
+      tags:
+        - "TODOs"
+      summary: "Erstellt ein TODO Eintrag mit einem Text und einem Status."
+      description: "Erstellt ein TODO Eintrag mit einem Text und einem Status."
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                status:
+                  type: string
+                  enum: [active, completed]
+              required:
+                - text
+                - status
+          
+      responses:
+        "202":
+          description: "Erfolgreiches erstellen des TODOs."
+          content:
+            text/plain:
+              schema:
+                type: "string"
+
+        "400":
+          description: "Falscher Body für den Request."
 
   /todos/{todo_id}:
     get:

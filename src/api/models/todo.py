@@ -12,7 +12,7 @@ class Todo():
     Represents a single Todo in the list.
     """
 
-    def __init__(self, text: str, status: str, changed: str = datetime.now().isoformat(), id = uuid.uuid1()) -> None:
+    def __init__(self, text: str, status: str, changed: str = None, id = None) -> None:
         """
         Initializes a Todo Object.
         
@@ -24,9 +24,14 @@ class Todo():
             self.status = TodoStatus[status.upper()]
         except:
             raise ValueError(f"status: {status} not supported")
-        self.changed = changed
-        self.id = id
 
+        if not changed:
+            changed = datetime.now().isoformat()
+        self.changed = changed
+
+        if not id:
+            id = uuid.uuid4().__str__()
+        self.id = id
     
     def to_json(self) -> Dict:
         """
