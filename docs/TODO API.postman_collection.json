@@ -7,35 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "Erstelle ein TODO",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"text\": \"Clean the dining room\",\r\n    \"status\": \"active\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/{{TODOS_API}}",
-					"protocol": "{{PROTOCOL}}",
-					"host": [
-						"{{HOST}}"
-					],
-					"port": "{{PORT}}",
-					"path": [
-						"{{TODOS_API}}"
-					]
-				},
-				"description": "Erstellt ein TODO Eintrag mit einem text und einem Status.\n\nBeschreibung der möglichen Status:\n\n*   active: Das TODO muss noch erledigt werden.\n*   completed: Das TODO ist bereits erledigt.\n    \n\nGibt die eindeutige ID des soeben erstellten TODOs zurück."
-			},
-			"response": []
-		},
-		{
 			"name": "Hole alle TODOs",
 			"request": {
 				"method": "GET",
@@ -73,6 +44,35 @@
 					]
 				},
 				"description": "Gibt ein TODO mit einer spezifischen ID zurück."
+			},
+			"response": []
+		},
+		{
+			"name": "Erstelle ein TODO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Clean the table\",\r\n    \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/{{TODOS_API}}",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{TODOS_API}}"
+					]
+				},
+				"description": "Erstellt ein TODO Eintrag mit einem text und einem Status.\n\nBeschreibung der möglichen Status:\n\n*   active: Das TODO muss noch erledigt werden.\n*   completed: Das TODO ist bereits erledigt.\n    \n\nGibt die eindeutige ID des soeben erstellten TODOs zurück."
 			},
 			"response": []
 		},
