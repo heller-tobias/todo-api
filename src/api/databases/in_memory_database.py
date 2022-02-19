@@ -33,10 +33,10 @@ class InMemoryDatabase(Database):
             return None
         return filtered[0]
 
-    def create_todo(self, todo: Todo) -> bool:
+    def create_todo(self, todo: Todo) -> str:
         """
         Adds the todo to the database.
-        Returns whether it was successful or not.
+        Returns the id of the created todo.
         """
         # If it exist -> replace
         if self.get_todo_by_id(todo.id):
@@ -44,7 +44,7 @@ class InMemoryDatabase(Database):
 
         # If it doesn't exist -> add
         self.todos.append(todo)
-        return True
+        return todo.id
 
     def delete_todo(self, todo_id: str) -> bool:
         """

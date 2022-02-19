@@ -20,11 +20,47 @@ paths:
                 type: "array"
                 items:
                   properties:
+                    id:
+                      type: string
                     text:
                       type: string
                     status:
                       type: string
                     changed:
                       type: string
+
+  /todos/{todo_id}:
+    get:
+      operationId: "endpoints.todos.get_by_id"
+      tags:
+        - "TODOs"
+      summary: "Gibt ein TODO mit einer spezifischen ID zurück."
+      description: "Gibt ein TODO mit einer spezifischen ID zurück."
+      parameters:
+        - name: todo_id
+          in: path
+          description: todo id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Erfolgreiches holen des TODOs."
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  id:
+                    type: string
+                  text:
+                    type: string
+                  status:
+                    type: string
+                  changed:
+                    type: string
+        "404":
+          description: "TODO mit dieser ID nicht gefunden."
+
 servers:
   - url: /

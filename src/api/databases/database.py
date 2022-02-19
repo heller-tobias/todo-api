@@ -26,10 +26,10 @@ class Database():
         """
         pass
 
-    def create_todo(self, todo: Todo) -> bool:
+    def create_todo(self, todo: Todo) -> str:
         """
         Adds the todo to the database.
-        Returns whether it was successful or not.
+        Returns the id of the newly added todo.
         """
         pass
 
