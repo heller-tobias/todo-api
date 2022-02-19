@@ -25,9 +25,12 @@ Die umgesetzten Funktionalitäten sind **fett** markiert.
 
 ## Mögliche Erweiterungen
 * Erstellen von mehreren Listen 
-    * Erweitern des Endpoints mit einer ListenId
+    * Erweitern des Endpoints mit einer ListenId z.B. ``/lists/{listId}/todos``
     * Erstellen einer Liste
+* Zusätzlicher Parameter des Todos mit Position innerhalb der Liste
 * GET mit filtern nach Status z.B. ?status=completed
+* Authentifizierung des Users mittels JWT
+* Support von HTTPs
 
 # Repository Übersicht
 - Im Ordner  ``./docs`` befindet sich die Postman Collection als Beschreibung der API. Diese kann auch zum Testen verwendet werden.

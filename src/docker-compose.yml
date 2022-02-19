@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  todo-api:
+    build: ./api/
+    ports:
+      - "5001:5001"
+    restart: always

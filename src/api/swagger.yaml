@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  description: TODOAPI
+  version: 1.0.0
+  title: Swagger REST API
+paths:
+  /todos:
+    get:
+      operationId: "endpoints.todos.get_all"
+      tags:
+        - "TODOs"
+      summary: "Gibt alle TODOs mit text und status zurück."
+      description: "Gibt alle TODOs mit text und status zurück."
+      responses:
+        "200":
+          description: "Erfolgreiches holen der TODOs."
+          content:
+            application/json:
+              schema:
+                type: "array"
+                items:
+                  properties:
+                    text:
+                      type: string
+                    status:
+                      type: string
+                    changed:
+                      type: string
+servers:
+  - url: /
