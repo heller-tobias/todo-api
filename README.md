@@ -48,7 +48,8 @@ Die API wird via Docker Container gestartet.
 Die API läuft nun unter localhost:5001
 
 ## Testen der API
--  Öffnen der Postman Collection von ``./docs``
+-  Öffnen der Postman Collection von ``./docs``.
+-  Öffnen und auswählen des Environments von ``./docs``.
 -  Erstellen einer Notiz mit POST ``/todos``.
    - Gibt Id zurück
 - Holen aller Notizen mit GET ``/todos``.
