@@ -1,7 +1,7 @@
 
 Backend für die todo app https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW.
 
-Aufgewendete Zeit: xxh xxmin
+Aufgewendete Zeit: 02h 50min
 
 - [Funktionalitäten](#funktionalitäten)
   - [Mögliche Erweiterungen](#mögliche-erweiterungen)
@@ -13,11 +13,11 @@ Aufgewendete Zeit: xxh xxmin
 
 # Funktionalitäten
 Folgende Funktionalitäten soll die API bieten. 
-* Erstellen eines TODOs, beinhaltet:
-    * Text
-    * Status (active, complete)
-* Abrufen eines TODOs mit ID
-* Abrufen aller TODOs
+* **Erstellen eines TODOs, beinhaltet:**
+    * **Text**
+    * **Status (active, complete)**
+* **Abrufen eines TODOs mit ID**
+* **Abrufen aller TODOs**
 * Bearbeiten eines TODOs
 * Löschen eines TODOs
 
@@ -57,4 +57,3 @@ Die API läuft nun unter localhost:5001
    - Gibt Id zurück
 - Holen aller Notizen mit GET ``/todos``.
 - Holen der erstellten Notiz mit GET ``/todos/{id}``.
-- Bearbeiten der Notiz mit PUT ``/todos/{id}``.
