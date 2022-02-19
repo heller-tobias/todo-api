@@ -1,6 +1,6 @@
 from typing import List
 
-from api.models.todo import Todo
+from models.todo import Todo
 
 class Database():
     """
